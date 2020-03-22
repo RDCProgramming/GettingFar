@@ -5,6 +5,7 @@
 #include <fstream>
 #include <windows.h>
 #include <shellapi.h>
+#include <iostream>
 
 namespace GettingFar {
 
@@ -52,11 +53,13 @@ namespace GettingFar {
 	private: System::Windows::Forms::Label^ label3;
 
 
+
+
 	private:
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -84,6 +87,7 @@ namespace GettingFar {
 			this->numericUpDown1->Name = L"numericUpDown1";
 			this->numericUpDown1->Size = System::Drawing::Size(290, 20);
 			this->numericUpDown1->TabIndex = 1;
+			this->numericUpDown1->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 75, 0, 0, 0 });
 			// 
 			// label1
 			// 
@@ -102,6 +106,7 @@ namespace GettingFar {
 			this->button1->TabIndex = 3;
 			this->button1->Text = L"Set";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm::Button1_Click);
 			// 
 			// label2
 			// 
@@ -165,7 +170,7 @@ namespace GettingFar {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::Control;
-			this->ClientSize = System::Drawing::Size(314, 204);
+			this->ClientSize = System::Drawing::Size(314, 201);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->numericUpDown2);
 			this->Controls->Add(this->button4);
@@ -175,6 +180,8 @@ namespace GettingFar {
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->numericUpDown1);
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
+			this->MaximizeBox = false;
 			this->Name = L"MyForm";
 			this->Text = L"GettingFar";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
@@ -186,15 +193,26 @@ namespace GettingFar {
 		}
 #pragma endregion
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
+
 	}
 	private: System::Void Button2_Click(System::Object^ sender, System::EventArgs^ e) {
+		system("@echo off");
+		system("echo Opened \"How?\"\n");
 		MessageBox::Show("Go to Discord Settings > Keybinds > Add a keybind > Unassigned > Toggle Deafen > Record Keybind > Press \"\\\"");
 	}
 private: System::Void Button4_Click(System::Object^ sender, System::EventArgs^ e) {
+	system("@echo off");
+	system("echo Opened \"credits\"\n");
 	MessageBox::Show("Made by D9ED and AzureGH in RCDProgramming for zSpectrix");
 }
 private: System::Void Button3_Click(System::Object^ sender, System::EventArgs^ e) {
+	system("@echo off");
 	system("start https://paypal.me/scottcow");
+	system("echo Opened paypal.\n");
+}
+private: System::Void Button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	system("@echo off");
+	system("echo Settings have been set!\n");
 }
 };
 }
