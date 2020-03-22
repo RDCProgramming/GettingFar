@@ -165,7 +165,7 @@ namespace GettingFar {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::Control;
-			this->ClientSize = System::Drawing::Size(324, 204);
+			this->ClientSize = System::Drawing::Size(314, 204);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->numericUpDown2);
 			this->Controls->Add(this->button4);
