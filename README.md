@@ -1,5 +1,5 @@
 # GettingFar
-GettingFar is a memory reader that automatically deafens discord on a high percentage of your choice
+GettingFar is a memory reader that automatically deafens discord on a high percentage of your choice in a Geometry Dash level
 
 
 Q: Where do I download  
